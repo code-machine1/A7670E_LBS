@@ -31,7 +31,7 @@ extern "C" {
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-
+#include <stdbool.h>
 /* USER CODE END Includes */
 
 /* Exported types ------------------------------------------------------------*/
@@ -57,8 +57,10 @@ void Error_Handler(void);
 /* USER CODE END EFP */
 
 /* Private defines -----------------------------------------------------------*/
-#define A76_PWIO_Pin GPIO_PIN_1
-#define A76_PWIO_GPIO_Port GPIOA
+#define A7670E_STATUS_Pin GPIO_PIN_14
+#define A7670E_STATUS_GPIO_Port GPIOC
+#define A7670E_PWIO_Pin GPIO_PIN_1
+#define A7670E_PWIO_GPIO_Port GPIOA
 #define LPUART1_TX_Pin GPIO_PIN_2
 #define LPUART1_TX_GPIO_Port GPIOA
 #define LPUART1_RX_Pin GPIO_PIN_3
@@ -99,7 +101,8 @@ void Error_Handler(void);
 #define A7670E_RST_IO_GPIO_Port GPIOB
 
 /* USER CODE BEGIN Private defines */
-
+#define A7670E_PWIO_EN(x) ((x==1) ? (A7670E_PWIO_GPIO_Port->BSRR=A7670E_PWIO_Pin) : (A7670E_PWIO_GPIO_Port->BRR=A7670E_PWIO_Pin))//1£º¿ªÆô 0£º¹Ø±Õ
+#define GET_A7670E_STATUS   HAL_GPIO_ReadPin(A7670E_STATUS_GPIO_Port,A7670E_STATUS_Pin)
 /* USER CODE END Private defines */
 
 #ifdef __cplusplus

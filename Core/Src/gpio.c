@@ -52,14 +52,20 @@ void MX_GPIO_Init(void)
   __HAL_RCC_GPIOB_CLK_ENABLE();
 
   /*Configure GPIO pin Output Level */
-  HAL_GPIO_WritePin(GPIOA, A76_PWIO_Pin|LPUART1_RTS_Pin|ULN2003_INC_Pin|ULN2003_IND_Pin
+  HAL_GPIO_WritePin(GPIOA, A7670E_PWIO_Pin|LPUART1_RTS_Pin|ULN2003_INC_Pin|ULN2003_IND_Pin
                           |BQ__GPOUT_Pin|SP3485_PWIO_Pin|ULN2003_INB_Pin|ULN2003_INA_Pin, GPIO_PIN_RESET);
 
   /*Configure GPIO pin Output Level */
   HAL_GPIO_WritePin(GPIOB, BO_SDA_Pin|BO_SCL_Pin|PWRKEY_IO_Pin|A7670E_RST_IO_Pin, GPIO_PIN_RESET);
 
-  /*Configure GPIO pins : PC14 PC15 */
-  GPIO_InitStruct.Pin = GPIO_PIN_14|GPIO_PIN_15;
+  /*Configure GPIO pin : PtPin */
+  GPIO_InitStruct.Pin = A7670E_STATUS_Pin;
+  GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
+  GPIO_InitStruct.Pull = GPIO_NOPULL;
+  HAL_GPIO_Init(A7670E_STATUS_GPIO_Port, &GPIO_InitStruct);
+
+  /*Configure GPIO pin : PC15 */
+  GPIO_InitStruct.Pin = GPIO_PIN_15;
   GPIO_InitStruct.Mode = GPIO_MODE_ANALOG;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   HAL_GPIO_Init(GPIOC, &GPIO_InitStruct);
@@ -72,7 +78,7 @@ void MX_GPIO_Init(void)
 
   /*Configure GPIO pins : PAPin PAPin PAPin PAPin
                            PAPin PAPin PAPin PAPin */
-  GPIO_InitStruct.Pin = A76_PWIO_Pin|LPUART1_RTS_Pin|ULN2003_INC_Pin|ULN2003_IND_Pin
+  GPIO_InitStruct.Pin = A7670E_PWIO_Pin|LPUART1_RTS_Pin|ULN2003_INC_Pin|ULN2003_IND_Pin
                           |BQ__GPOUT_Pin|SP3485_PWIO_Pin|ULN2003_INB_Pin|ULN2003_INA_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
   GPIO_InitStruct.Pull = GPIO_NOPULL;

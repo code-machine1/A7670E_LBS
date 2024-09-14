@@ -1,4 +1,4 @@
-a7670e_lbs/gmsi.o: ..\gmsi\gmsi.c RTE\_A7670E_LBS\Pre_Include_Global.h \
+a7670e_lbs/gmsi.o: ..\gmsi\gmsi.c \
   D:\Program\ Files\Keil_v5\ARM\ARMCLANG\Bin\..\include\stdint.h \
   ..\gmsi\gmsi.h ..\gmsi\gbase.h ..\gmsi\global_define.h \
   D:\Program\ Files\Keil_v5\ARM\ARMCLANG\Bin\..\include\stdbool.h \

@@ -1,5 +1,4 @@
-a7670e_lbs/gpio.o: ..\Core\Src\gpio.c \
-  RTE\_A7670E_LBS\Pre_Include_Global.h ..\Core\Inc\gpio.h \
+a7670e_lbs/gpio.o: ..\Core\Src\gpio.c ..\Core\Inc\gpio.h \
   ..\Core\Inc\main.h ..\Drivers\STM32L0xx_HAL_Driver\Inc\stm32l0xx_hal.h \
   ..\Core\Inc\stm32l0xx_hal_conf.h \
   ..\Drivers\STM32L0xx_HAL_Driver\Inc\stm32l0xx_hal_rcc.h \
@@ -34,4 +33,5 @@ a7670e_lbs/gpio.o: ..\Core\Src\gpio.c \
   ..\Drivers\STM32L0xx_HAL_Driver\Inc\stm32l0xx_hal_tim.h \
   ..\Drivers\STM32L0xx_HAL_Driver\Inc\stm32l0xx_hal_tim_ex.h \
   ..\Drivers\STM32L0xx_HAL_Driver\Inc\stm32l0xx_hal_uart.h \
-  ..\Drivers\STM32L0xx_HAL_Driver\Inc\stm32l0xx_hal_uart_ex.h
+  ..\Drivers\STM32L0xx_HAL_Driver\Inc\stm32l0xx_hal_uart_ex.h \
+  D:\Program\ Files\Keil_v5\ARM\ARMCLANG\Bin\..\include\stdbool.h

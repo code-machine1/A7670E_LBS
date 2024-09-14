@@ -1,6 +1,6 @@
 a7670e_lbs/eventrecorder.o: \
   C:\Users\AIMIRA\AppData\Local\Arm\Packs\Keil\ARM_Compiler\1.7.2\Source\EventRecorder.c \
-  RTE\_A7670E_LBS\Pre_Include_Global.h RTE\_A7670E_LBS\RTE_Components.h \
+  RTE\_A7670E_LBS\RTE_Components.h \
   ..\Drivers\CMSIS\Device\ST\STM32L0xx\Include\stm32l0xx.h \
   ..\Drivers\CMSIS\Device\ST\STM32L0xx\Include\stm32l010x4.h \
   ..\Drivers\CMSIS\Include\core_cm0plus.h \

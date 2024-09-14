@@ -1,6 +1,5 @@
 a7670e_lbs/stm32l0xx_hal_tim.o: \
   ..\Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_tim.c \
-  RTE\_A7670E_LBS\Pre_Include_Global.h \
   ..\Drivers\STM32L0xx_HAL_Driver\Inc\stm32l0xx_hal.h \
   ..\Core\Inc\stm32l0xx_hal_conf.h \
   ..\Drivers\STM32L0xx_HAL_Driver\Inc\stm32l0xx_hal_rcc.h \
